@@ -60,4 +60,19 @@ class NCycle {
             console.log(`This is a ${this.make} ${this.model} NCycle.`);
         }
     }
+    printAll() {
+        if (this.make instanceof Array && this.model instanceof Array) {
+            this.make.forEach((m, i) => {
+                if (this.model[i]) {
+                    console.log(`This NCycle has a ${m} ${this.model[i]} at ${i}.`);
+                }
+            });
+        }
+        else {
+            console.log(`This is a ${this.make} ${this.model} NCycle.`);
+        }
+    }
 }
+const myNCycle = new NCycle(["Yamaha", "Honda"], ["R1", "CBR"]);
+myNCycle.print(1);
+myNCycle.printAll();
