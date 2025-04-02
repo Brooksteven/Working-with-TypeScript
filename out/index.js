@@ -76,3 +76,5 @@ class NCycle {
 const myNCycle = new NCycle(["Yamaha", "Honda"], ["R1", "CBR"]);
 myNCycle.print(1);
 myNCycle.printAll();
+//PART 4 
+//not exactly sure what was meant by test your code and the testing provided has slipped my mind. Going to do more research on this.
