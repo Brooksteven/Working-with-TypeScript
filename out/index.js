@@ -49,11 +49,15 @@ class NCycle {
     }
     print(x = 0) {
         if (this.make instanceof Array && this.model instanceof Array) {
-            console.log(this.make[x] && this.model[x] ?
-                "This NCycle has a ${this.make} ${this.model} at ${parameter}." : "This NCycle was not created properly.");
+            if (this.make[x] && this.model[x]) {
+                console.log(`This NCycle has a ${this.make[x]} ${this.model[x]} at ${x}.`);
+            }
+            else {
+                console.log("This NCycle was not created properly.");
+            }
         }
         else {
-            console.log("This NCycle was not created properly.");
+            console.log(`This is a ${this.make} ${this.model} NCycle.`);
         }
     }
 }
